@@ -47,7 +47,7 @@ logo2.setAttribute('src', siteContent["cta"]["img-src"])
 let logo3 = document.getElementById("middle-img");
 logo3.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-let navlinks = document.querySelectorAll("a");
+let navlinks = document.getElementsByTagName("a");
 
 navlinks[0].textContent = (siteContent["nav"]["nav-item-1"]);
 navlinks[1].textContent = (siteContent["nav"]["nav-item-2"]);
@@ -83,5 +83,19 @@ para[7].textContent = (siteContent["contact"]["email"]);
 
 para[8].textContent = (siteContent["footer"]["copyright"]);
 
+for (var i = 0; i < navlinks.length; i++) {
+	navlinks[i].style.color = 'green';
+};
+
+
+let append = document.createElement('a');
+let linkText = document.createTextNode("Take Me Away");
+append.appendChild(linkText);
+append.href = "#";
+
+let prepend = document.createElement('a');
+let linkText2 = document.createTextNode("Home");
+prepend.appendChild(linkText2);
+prepend.href = "#";
 
 
