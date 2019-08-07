@@ -83,11 +83,6 @@ para[7].textContent = (siteContent["contact"]["email"]);
 
 para[8].textContent = (siteContent["footer"]["copyright"]);
 
-for (var i = 0; i < navlinks.length; i++) {
-	navlinks[i].style.color = 'green';
-};
-
-
 let append = document.createElement('a');
 let linkText = document.createTextNode("Take Me Away");
 append.appendChild(linkText);
@@ -98,4 +93,9 @@ let linkText2 = document.createTextNode("Home");
 prepend.appendChild(linkText2);
 prepend.href = "#";
 
+document.querySelector("nav").appendChild(append);
+document.querySelector("nav").prepend(prepend);
 
+for (var i = 0; i < navlinks.length; i++) {
+	navlinks[i].style.color = 'green';
+};
