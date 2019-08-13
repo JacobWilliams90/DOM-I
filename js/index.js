@@ -39,7 +39,8 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = siteContent.nav['img-src'];
 
 let logo2 = document.getElementById("cta-img");
 logo2.setAttribute('src', siteContent["cta"]["img-src"])
@@ -99,3 +100,18 @@ document.querySelector("nav").prepend(prepend);
 for (var i = 0; i < navlinks.length; i++) {
 	navlinks[i].style.color = 'green';
 };
+
+let page = document.querySelector('.container');
+let head = document.querySelector('header')
+let cta = document.querySelector('.cta')
+let main = document.querySelector('.main-content')
+let con = document.querySelector('.contact')
+
+page.style.backgroundColor = 'black';
+page.style.color = 'white';
+logo.style.display = 'none';
+head.style.justifyContent = 'center';
+cta.style.flexDirection = 'row-reverse';
+main.style.display = 'flex'
+main.style.flexDirection = 'column-reverse';
+con.style.textAlign = 'right';
